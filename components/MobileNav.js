@@ -69,12 +69,14 @@ export default function MobileNav() {
             },
         ];
 
-        if (!user) return baseItems.slice(0, 3); // Show limited items if not logged in
+        if (!user) return null; // Hide nav if not logged in
 
         return baseItems.filter(item => item.roles.includes(user.role));
     };
 
     const navItems = getNavItems();
+
+    if (!navItems) return null;
 
     return (
         <nav className="md:hidden fixed bottom-0 left-0 right-0 glass-nav z-50">
