@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Sidebar from '@/components/Sidebar';
 import RightSidebar from '@/components/RightSidebar';
-import MobileNav from '@/components/MobileNav';
 import DoubtCard from '@/components/DoubtCard';
 import Tag from '@/components/Tag';
 import PageLoadingAnimation from '@/components/PageLoadingAnimation';
@@ -294,7 +293,6 @@ export default function HomePage() {
                 <RightSidebar />
             </div>
 
-            <MobileNav />
         </>
     );
 }
